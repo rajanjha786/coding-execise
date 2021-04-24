@@ -46,8 +46,8 @@ Request Body
     "quantity": 100
     }
 ```
-
 <h4>API for calculating the Market Value of Investor</h4>
+
 ```java
 GET http://localhost:8080/value/investors/{investor}?&exclude={holdingName1}&exclude={holdingName2} 200 OK
 
@@ -57,9 +57,7 @@ Response Body
       "type":"INVESTOR",
       "value":6000
     }
-
 ```
-
 <h4>API for calculating the Market value of Fund</h4>
 
 ```java
