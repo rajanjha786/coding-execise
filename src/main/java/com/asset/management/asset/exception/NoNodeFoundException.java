@@ -10,8 +10,4 @@ public class NoNodeFoundException extends RuntimeException
     this.itsMessage = message;
   }
 
-  public String getItsMessage()
-  {
-    return itsMessage;
-  }
 }

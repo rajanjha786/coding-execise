@@ -1,9 +1,13 @@
 package com.asset.management.asset.model;
 
-import java.util.Objects;
-
 import com.fasterxml.jackson.annotation.JsonCreator;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
+@Getter
+@EqualsAndHashCode
+@ToString
 public class Investor
 {
   private final String name;
@@ -14,33 +18,4 @@ public class Investor
     this.name = name;
   }
 
-  public String getName()
-  {
-    return name;
-  }
-
-  @Override
-  public boolean equals(Object o)
-  {
-    if (this == o)
-      return true;
-    if (o == null || getClass() != o.getClass())
-      return false;
-    Investor investor = (Investor) o;
-    return name.equals(investor.name);
-  }
-
-  @Override
-  public int hashCode()
-  {
-    return Objects.hash(name);
-  }
-
-  @Override
-  public String toString()
-  {
-    return "Investor{" +
-        "name='" + name + '\'' +
-        '}';
-  }
 }

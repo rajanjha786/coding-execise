@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/value")
 public class MarketValueController
 {
-  private static List<String> EMPTY_LIST = Collections.emptyList();
+  private static final List<String> EMPTY_LIST = Collections.emptyList();
 
   private final MarketValueService itsMarketValueService;
 

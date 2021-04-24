@@ -1,7 +1,13 @@
 package com.asset.management.asset.model;
 
 import com.asset.management.asset.dao.graph.NodeType;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
+@Getter
+@ToString
+@EqualsAndHashCode
 public class MarketValueDTO
 {
   private final NodeType type;
@@ -11,16 +17,6 @@ public class MarketValueDTO
   {
     this.type = type;
     this.value = value;
-  }
-
-  public NodeType getType()
-  {
-    return type;
-  }
-
-  public int getValue()
-  {
-    return value;
   }
 
   public static MarketValueDTO create(NodeType theNodeType, int value)

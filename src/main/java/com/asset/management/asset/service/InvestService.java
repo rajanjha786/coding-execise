@@ -8,14 +8,11 @@ import com.asset.management.asset.dao.graph.NodeType;
 import com.asset.management.asset.dao.graph.WeightedNode;
 import com.asset.management.asset.model.InvestInFunds;
 import com.asset.management.asset.model.InvestInHolding;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class InvestService
 {
-  private static final Logger LOGGER = LoggerFactory.getLogger(InvestService.class);
 
   private final InvestorFundManager itsInvestorFundManager;
   private final NodeFactory itsNodeFactory;
