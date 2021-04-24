@@ -19,4 +19,6 @@ public class InvestInFunds
     this.investor = investor;
     this.fund = fund;
   }
+
+
 }

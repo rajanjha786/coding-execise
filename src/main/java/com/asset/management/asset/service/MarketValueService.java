@@ -23,10 +23,10 @@ public class MarketValueService
     this.itsAssetManager = theAssetManager;
   }
 
-  public int marketValueCalculator(String theInvestorName, NodeType theNodeType,
+  public int marketValueCalculator(String theNodeName, NodeType theNodeType,
       List<String> theExcluded)
   {
-    NamedNode aNamedNode = itsNodeFactory.createNamedNode(theInvestorName, theNodeType);
+    NamedNode aNamedNode = itsNodeFactory.createNamedNode(theNodeName, theNodeType);
     Set<NamedNode> aExcludedNode = createExcludedNode(theExcluded);
     MarketValueCalculator aMarketValueCalculator = new MarketValueCalculator(itsAssetManager,
         aExcludedNode);
@@ -38,7 +38,7 @@ public class MarketValueService
     Set<NamedNode> aExcludedSet = new HashSet<>();
     for(String theString: theExcluded)
     {
-      aExcludedSet.add(itsNodeFactory.createNamedNode(theString, NodeType.HOLDINGS));
+      aExcludedSet.add(itsNodeFactory.createWeightedNode(theString, NodeType.HOLDINGS,0));
     }
     return aExcludedSet;
   }

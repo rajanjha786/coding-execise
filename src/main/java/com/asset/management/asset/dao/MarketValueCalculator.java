@@ -1,6 +1,5 @@
 package com.asset.management.asset.dao;
 
-import java.util.Collections;
 import java.util.Set;
 
 import com.asset.management.asset.dao.graph.Edge;
@@ -13,7 +12,6 @@ public class MarketValueCalculator
 {
   private final ReadOnlyAssetManager itsAssetManager;
   private final Set<NamedNode> itsExcludedNode;
-  private static final Set<NamedNode> itsEmptyExcludedSet = Collections.emptySet();
   private static final NodeVisitor NODE_VISITOR = new WeightVisitor();
 
   public MarketValueCalculator(ReadOnlyAssetManager theAssetManager,
@@ -21,12 +19,6 @@ public class MarketValueCalculator
   {
     this.itsAssetManager = theAssetManager;
     this.itsExcludedNode = theExcludedNode;
-  }
-
-  public MarketValueCalculator(ReadOnlyAssetManager theAssetManager)
-  {
-    this.itsAssetManager = theAssetManager;
-    this.itsExcludedNode = itsEmptyExcludedSet;
   }
 
   public int calculateMarketValue(NamedNode theForNode)
