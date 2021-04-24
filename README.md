@@ -59,7 +59,9 @@ Response Body
     }
 
 ```
+
 <h4>API for calculating the Market value of Fund</h4>
+
 ```java
 GET http://localhost:8080/value/funds/{fund}?&exclude={holdingName1}&exclude={holdingName2} 200 OK
 
